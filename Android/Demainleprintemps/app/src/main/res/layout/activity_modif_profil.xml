@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.todob_000.demainleprintemps.ModifProfil"
+    android:background="#dd4f3060">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Modification de votre profil"
+        android:id="@+id/textModifProfil"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="#fffffef2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" Email"
+        android:id="@+id/textModifEmail"
+        android:gravity="center"
+        android:layout_marginTop="23dp"
+        android:textSize="25dp"
+        android:textColor="#fffffef2"
+        android:textColorHint="#fffffef2"
+        android:layout_below="@+id/textModifProfil"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textModifProfil"
+        android:layout_alignEnd="@+id/textModifProfil" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MailAModifier"
+        android:hint="Nouvelle adresse Mail"
+        android:gravity="center"
+        android:layout_marginTop="28dp"
+        android:textColorHint="#fffffef2"
+        android:textColor="#fffffef2"
+        android:layout_below="@+id/textModifEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textModifEmail"
+        android:layout_alignEnd="@+id/textModifEmail" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validation "
+        android:id="@+id/ValidModifMail"
+        android:layout_below="@+id/MailAModifier"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp"
+        android:layout_alignRight="@+id/MailAModifier"
+        android:layout_alignEnd="@+id/MailAModifier"
+        android:onClick="ModifEmail"
+        android:background="#fffffef2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Mot de Passe"
+        android:id="@+id/textMdpAModif"
+        android:textSize="25dp"
+        android:textIsSelectable="true"
+        android:textColor="#fffffef2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Login"
+        android:id="@+id/textLoginAModif"
+        android:layout_alignTop="@+id/textMdpAModif"
+        android:layout_alignRight="@+id/ValidModifMail"
+        android:layout_alignEnd="@+id/ValidModifMail"
+        android:layout_marginRight="51dp"
+        android:layout_marginEnd="51dp"
+        android:textSize="25dp"
+        android:textColor="#fffffef2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/AncienMdp"
+        android:textSize="15dp"
+        android:hint="Ancien mot de passe"
+        android:textColor="#fffffef2"
+        android:textColorHint="#fffffef2"
+        android:layout_above="@+id/NoveauMpd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/NoveauMpd"
+        android:layout_alignEnd="@+id/NoveauMpd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/NoveauMpd"
+        android:hint="Nouveau Mot de passe"
+        android:textSize="14dp"
+        android:textColor="#fffffef2"
+        android:textColorHint="#fffffef2"
+        android:layout_above="@+id/ConfirmationMdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/ConfirmationMdp"
+        android:hint="Confirmation"
+        android:textSize="15dp"
+        android:textColor="#fffffef2"
+        android:textColorHint="#fffffef2"
+        android:layout_above="@+id/ValidNvxMdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="23dp"
+        android:layout_alignRight="@+id/NoveauMpd"
+        android:layout_alignEnd="@+id/NoveauMpd" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validation"
+        android:id="@+id/ValidNvxMdp"
+        android:onClick="ModifMdp"
+        android:background="#fffffef2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="48dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NvxLogin"
+        android:layout_alignBottom="@+id/AncienMdp"
+        android:layout_alignLeft="@+id/textLoginAModif"
+        android:layout_alignStart="@+id/textLoginAModif"
+        android:hint="Nouveau login"
+        android:textSize="15dp"
+        android:layout_alignRight="@+id/ValidModifMail"
+        android:layout_alignEnd="@+id/ValidModifMail"
+        android:autoText="false"
+        android:textColorHint="#fffffef2"
+        android:textColor="#fffffef2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validation"
+        android:id="@+id/ValidNvxLogin"
+        android:onClick="ModifLogin"
+        android:background="#fffffef2"
+        android:layout_alignTop="@+id/ValidNvxMdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nation"
+        android:hint="Nouveau login"
+        android:textSize="15dp"
+        android:autoText="false"
+        android:textColorHint="#fffffef2"
+        android:textColor="#fffffef2"
+        android:layout_below="@+id/NoveauMpd"
+        android:layout_alignLeft="@+id/NvxLogin"
+        android:layout_alignStart="@+id/NvxLogin"
+        android:text="Nationalité" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTelephone"
+        android:hint="Nouveau login"
+        android:textSize="15dp"
+        android:autoText="false"
+        android:textColorHint="#fffffef2"
+        android:textColor="#fffffef2"
+        android:text="Telephone"
+        android:layout_above="@+id/nation"
+        android:layout_alignLeft="@+id/NvxLogin"
+        android:layout_alignStart="@+id/NvxLogin" />
+
+</RelativeLayout>

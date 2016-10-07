@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.todob_000.demainleprintemps" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Accueil"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/title_activity_connexion_reussie"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ChoixInscription"
+            android:label="@string/title_activity_choix_inscription"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Inscription_Fan"
+            android:label="@string/title_activity_inscription__fan"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ModifProfil"
+            android:label="@string/title_activity_modif_profil"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MdpPerdu"
+            android:label="@string/title_activity_mdp_perdu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".modifierImage"
+            android:label="@string/title_activity_modifier_image" >
+        </activity>
+        <activity
+            android:name=".MessagePostMdpPerdu"
+            android:label="@string/title_activity_message_post_mdp_perdu" >
+        </activity>
+        <activity
+            android:name=".SelectionInscription"
+            android:label="@string/title_activity_selection_inscription" >
+        </activity>
+        <activity
+            android:name=".InscriptionMenbres"
+            android:label="@string/title_activity_inscription_menbres" >
+        </activity>
+        <activity
+            android:name=".InscriptionMembres"
+            android:label="@string/title_activity_inscription_membres" >
+        </activity>
+        <activity
+            android:name=".SelectionPhoto"
+            android:label="@string/title_activity_selection_photo" >
+        </activity>
+        <activity
+            android:name=".FinalisationInscriptionMenbres"
+            android:label="@string/title_activity_finalisation_inscription_menbres" >
+        </activity>
+        <activity
+            android:name=".FinalisationInscriptionMembres"
+            android:label="@string/title_activity_finalisation_inscription_membres" >
+        </activity>
+        <activity
+            android:name=".InscriptionTerminee"
+            android:label="@string/title_activity_inscription_terminee" >
+        </activity>
+        <activity
+            android:name=".inscriptionFanTerminer"
+            android:label="@string/title_activity_inscription_fan_terminer" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demain le printemps</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="texteBoutonInscriptionAccueil">BoutonInscriptionAcceuil</string>
+    <string name="texteInscriptionAccueil">InscriptionAcceuil</string>
+    <string name="texteBoutonConnexionAccueil">BoutonConnexionAccueil</string>
+    <string name="titreEcranAccueil">Acceuil</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_connexion_reussie">Demain le printemps</string>
+    <string name="texteTitreConn">TitreConn</string>
+    <string name="hintLoginConn">LoginConn</string>
+    <string name="hintMdpConn">MdpConn</string>
+    <string name="texteBoutonConn">BoutonConn</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_choix_inscription">ChoixInscription</string>
+
+    <string-array name="identificationStatut">
+        <item>Etudiant</item>
+        <item>Ancien Etudiants</item>
+        <item>Menbre de lequipe</item>
+        <item>Fan/Candidat</item>
+    </string-array>
+    <string-array name="FC">
+        <item>Fan</item>
+        <item>Candidat</item>
+    </string-array>
+
+    <string name="title_activity_inscription__fan">Inscription_Fan</string>
+    <string name="PRENOM">Prenom</string>
+    <string name="Log">Login</string>
+    <string name="Nom">Nom</string>
+    <string name="ChampLoginConn">Login</string>
+    <string name="ChampMdpConn">Mot de passe</string>
+    <string name="boutonConn">Connexion</string>
+    <string name="title_activity_modif_profil">Modification du profil</string>
+    <string name="title_activity_choix_modif">ChoixModif</string>
+    <string name="title_activity_modifmdp">Modificatmdp</string>
+    <string name="title_activity_mdp_perdu">Redefinition du mot de passe</string>
+    <string name="Profil">profil_menu</string>
+    <string name="title_activity_modifier_image">Modification image</string>
+    <string name="title_activity_message_post_mdp_perdu">MessagePostMdpPerdu</string>
+    <string name="hintNom">nom</string>
+    <string name="hintPrenom">Prenom</string>
+    <string name="title_activity_selection_inscription">SelectionInscription</string>
+    <string name="title_activity_inscription_menbres">InscriptionMenbres</string>
+    <string name="title_activity_inscription_membres">InscriptionMembres</string>
+    <string name="title_activity_selection_photo">SelectionPhoto</string>
+    <string name="title_activity_finalisation_inscription_menbres">FinalisationInscriptionMenbres</string>
+    <string name="title_activity_finalisation_inscription_membres">FinalisationInscriptionMembres</string>
+    <string name="title_activity_inscription_terminee">InscriptionTerminee</string>
+    <string name="title_activity_inscription_fan_terminer">inscriptionFanTerminer</string>
+
+</resources>

@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.todob_000.demainleprintemps.MdpPerdu"
+    android:background="#dd4f3060"
+    android:gravity="center">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MotSecret"
+        android:hint="Mot Secret"
+        android:textSize="30dp"
+        android:layout_below="@+id/MDPPERDU"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/MDPPERDU"
+        android:layout_alignEnd="@+id/MDPPERDU"
+        android:textColor="#fffdfffb"
+        android:textColorHint="#fffff9f8"
+        android:gravity="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ValiderMdpPerdu"
+        android:hint="Valider"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#fffdfffb"
+        android:textColor="#ff000000"
+        android:onClick="ModifMdpPerdu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Vous avez perdu votre mot de passe?"
+        android:id="@+id/MDPPERDU"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#fffffcfe" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MdpPerdu"
+        android:layout_below="@+id/MotSecret"
+        android:layout_marginTop="63dp"
+        android:hint="Nouveau mot de passe"
+        android:textSize="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/MDPPERDU"
+        android:layout_alignEnd="@+id/MDPPERDU"
+        android:textColorHint="#fffaffee"
+        android:textColor="#fffefdff"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ConfirmationMdpPerdu"
+        android:layout_below="@+id/MdpPerdu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:hint="Confirmation"
+        android:textSize="30dp"
+        android:layout_alignRight="@+id/MdpPerdu"
+        android:layout_alignEnd="@+id/MdpPerdu"
+        android:textColor="#fffffbf7"
+        android:textColorHint="#fffffbf7"
+        android:gravity="center" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+
+#cercle {
+    animation: animation_A 4s infinite;
+    animation-timing-function: linear;
+}
+
+#cercle2 {
+    animation: animation_B 4s infinite;
+    animation-timing-function: linear;
+    
+}
+img{
+    padding: 35px;
+    float: left 10px auto;
+}
+
+@keyframes animation_A {
+    0%
+    {
+        transform: translate3d(0px, 0px, 0px);
+}
+     50%
+    {
+        transform: translate3d(500px,0px,0px);
+}
+     100%
+    {
+        transform: translate3d(0px, 0px, 0px);
+}
+}
+@keyframes animation_B {
+  0%
+    {
+        transform: translate3d(0px, 0px, 0px);
+}
+     50%
+    {
+        transform: translate3d(500px,0px,0px);
+}
+     100%
+    {
+        transform: translate3d(0px, 0px, 0px);
+}
+}

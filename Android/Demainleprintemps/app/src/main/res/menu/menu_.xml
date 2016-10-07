@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_Message" android:title="drawable"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@drawable/logo"/>/>
+
+    <item android:id="@+id/menu_ModifPhoto" android:title="Modifcation photo"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+
+    <item android:id="@+id/menu_ModifProfil" android:title="Modification Profil"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+
+
+    <item android:id="@+id/menu_profil" android:title="nombre d'inscrit"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+
+</menu>
+
+

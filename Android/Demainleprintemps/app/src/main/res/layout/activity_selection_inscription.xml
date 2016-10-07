@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.todob_000.demainleprintemps.SelectionInscription"
+    android:background="#dd4f3060">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Selection Inscription"
+        android:id="@+id/titreSelecInscri"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#fffefff3"
+        android:textSize="35dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="  Prof"
+        android:id="@+id/boutonSelecProf"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="lancerInscriptionProf"
+        android:textColor="#fffdf8ff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text=" Ancien Eleve"
+        android:id="@+id/boutonSelecAncienEleve"
+        android:layout_below="@+id/boutonSelecProf"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="lancerInscriptionAncienEleve"
+        android:textColor="#fffdf8ff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text=" Eleve Actuel"
+        android:id="@+id/boutonSelecEleveActuel"
+        android:layout_below="@+id/boutonSelecAncienEleve"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="lancerInscriptionEleveActuel"
+        android:textColor="#fffdf8ff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text=" Candidat"
+        android:id="@+id/boutonSelecCandidat"
+        android:layout_below="@+id/boutonSelecEleveActuel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="lancerInscriptionCandidat"
+        android:textColor="#fffdf8ff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Fan"
+        android:id="@+id/boutonSelecFan"
+        android:layout_below="@+id/boutonSelecCandidat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="lancerInscriptionFan"
+        android:textColor="#fffdf8ff" />
+
+</RelativeLayout>
