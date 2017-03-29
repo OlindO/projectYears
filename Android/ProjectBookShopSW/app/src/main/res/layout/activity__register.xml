@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:background="#FEC12D">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Votre civilité "
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="50px"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+
+            android:textColor="#000000">
+
+            <RadioButton
+                android:id="@+id/radiobutton_monsieur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monsieur"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton_madame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Madame"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton_mademoiselle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mademoisel"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+        </RadioGroup>
+
+        <!-- NOM -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="Saisir votre nom"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/edittext_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!-- PRENOM -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="Saisir votre _prenom"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/edittext_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!-- ADRESSE EMAIL -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="Saisir votre adresse mail"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!-- MOT DE PASSE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="Saisir votre mot de passe "
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:inputType="textPassword"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/button_valider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="Valider"
+            />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
