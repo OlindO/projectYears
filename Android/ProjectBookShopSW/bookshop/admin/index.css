@@ -1,0 +1,38 @@
+body{
+	font-size: 12pt;
+}
+a{
+	color: #111;
+}
+a.menu{
+	display: block;
+	text-decoration: none;
+	color: #111;
+	padding: 10px;
+}
+a.menu:hover{
+	background-color: #777;
+	color: #fff;
+}
+h1, h2, h3, h4, h5, h6, p, div, fieldset{
+	padding: 5px; margin: 5px;
+}
+.succes{
+	color: #006621;
+}
+.erreur{
+	color: #EA4335;
+}
+legend{
+	font-size: 14pt;
+	font-weight: bold;
+}
+a.liste{
+	padding: 5px;
+	display: block;
+	width: 200px;
+	text-decoration: none;
+}
+a.liste:hover{
+	background-color: #A9F5F2;
+}

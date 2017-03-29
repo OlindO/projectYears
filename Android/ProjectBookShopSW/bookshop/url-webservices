@@ -1,0 +1,5 @@
+####### WS PERSONNES #######
+
+LISTE DES PERSONNES : http://10.75.25.189:8080/bookshop/json/personne.php?action=lister
+CONNEXION PAR POST : http://10.75.25.189:8080/bookshop/json/personne.php?action=connexion
+INSCRIPTION PAR POST : http://10.75.25.189:8080/bookshop/json/personne.php?action=inscription
