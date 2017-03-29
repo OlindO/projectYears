@@ -1,0 +1,35 @@
+1)   À propos de
+---- -----------
+MyApplication est une application Android basé sur SQlite, qui permet de pouvoir 
+chercher des livres en fonction de leur thème et de pouvoir les achetés avec 
+un compte étant enregistrer dans la base de données.
+
+
+2)   Contacts
+---- --------
+La manière la plus simple de me contacté est de me soumettre un
+mail ou de poster des commentaires sur mon github.
+
+Mon PortFoliode http://piedenargent.wixsite.com/portfolioyanis
+
+3)   Gradle requis/optionnelles
+--   --------
+Le gradle suivant doit être utilisé :
+-Picasso
+
+Picasso est un open source qui à était créer pour gérer les tailles des images
+facilement
+Télécharger : http://square.github.io/picasso/ 
+Pour ceux qui utilise eclipse télécharger cette version "picasso-2.4.0.jar" dans 
+le dossier lib, dans le cas ou vous utilisez Android Studio utilisez les dépencies
+dans le build.gradle. 
+
+dependencies {
+	...
+	compile "com.squareup.picasso:picasso:2.4.0"
+	...
+}
+
+Il vous sera important de rajouter les permissions dans le fichier manifest si 
+vos images proviennes d'internet. 
+<uses-permission android:name"android.permission.INTERNET"/>

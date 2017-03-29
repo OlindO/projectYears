@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="libelle_donnees_enregistrees"> Vos données on étais enregistrer dans la base</string>
+    <string name="infoSp">Veuillez nous donner votre theme </string>
+    <string name="libelle_prenom_obligatoire">Prenom obligatoire</string>
+    <string name="libelle_nom_obligatoire">Nom obligatoire</string>
+    <string name="libelle_email_obligatoire">Email obligatoire</string>
+    <string name="libelle_password_obligatoire"> Mot de passe requie </string>
+    <string name="libelle_telephone_obligatoire">Tel obligatoire</string>
+    <string name="libelle_desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros eros, posuere id arcu et, aliquet aliquet nunc. Integer porta est ut dui congue ullamcorper. Aenean dui purus, venenatis at lorem sed, efficitur blandit sapien. Phasellus eget dignissim nulla, vel blandit ante. Nunc vulputate, nibh sed aliquet gravida, nisi nisi commodo erat, sagittis tempus dolor nulla vitae justo. Integer vel viverra nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nec euismod nisl, vel mattis sapien. Sed sodales sem nec felis eleifend congue. Vivamus varius elit id ultricies pharetra. Donec elementum, ipsum tincidunt malesuada viverra, turpis lacus ornare orci, sit amet venenatis tellus tortor id nunc. Vivamus non cursus nisl. Etiam ex lorem, placerat auctor metus quis, consequat sollicitudin libero. Phasellus pretium, nisi in vulputate varius, erat erat porta ipsum, vel porttitor quam mi vel enim. Vivamus lacinia pulvinar imperdiet. Ut blandit turpis ac nunc interdum, a lacinia justo sagittis.
+
+Pellentesque quis odio eu tortor ornare bibendum. In ut lorem sit amet mauris iaculis semper bibendum in lacus. Phasellus ut dui euismod, pellentesque odio in, elementum lectus. Nam facilisis tempor dignissim. Fusce et semper purus. Quisque rhoncus, sem feugiat laoreet venenatis, nunc libero sollicitudin mauris, id semper tortor nibh quis nisi. Aliquam consequat vitae massa eget euismod. In mauris felis, feugiat eget imperdiet vitae, pretium non elit. Aliquam sed arcu sit amet dui mollis imperdiet sit amet at quam. Ut cursus, nulla at condimentum luctus, odio leo venenatis arcu, eu consectetur nisl velit sed nisi. Ut volutpat sagittis tellus in rutrum. Aliquam non nunc a magna pulvinar luctus.
+</string>
+    <string name="libelle_civilite_obligatoire"> Civilite requie </string>
+
+    <string name="place">Search</string>
+</resources>
