@@ -1,6 +1,7 @@
 package com.example.yanis.projectbookshopsw;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -58,8 +59,10 @@ public class Activity_Profil extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Recherche Avancé ", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent intent = new Intent(Activity_Profil.this, AdvancedResearch.class);
+                startActivity(intent);
             }
         });
 

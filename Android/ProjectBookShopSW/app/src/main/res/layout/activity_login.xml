@@ -28,6 +28,7 @@
             android:drawablePadding="8dp"
             android:padding="10dp"
             android:hint="Email"
+            android:text="abib.sandra@gmail.com"
             android:textColorHint="#000000"
             android:textStyle="bold"/>
 
@@ -52,6 +53,7 @@
             android:layout_marginTop="-2dp"
             android:padding="10dp"
             android:hint="Password"
+            android:text="sandra"
             android:textColorHint="#000000"
             android:inputType="textPassword"
             android:textStyle="bold"/>

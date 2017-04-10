@@ -11,7 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.yanis.projectbookshopsw.R;
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -81,52 +83,27 @@ public class LivreAdapteur extends BaseAdapter {
 
         if(view == null)
         {
-            if(isDetails)
-            {
-                //view = layoutInflater.inflate(R.layout.item_image_detail,null);
-            }
-            else{
-                // Au cas ou on a pas dde vue on va crée notre vue pour ensuite assigner
-                // nos id a nos champ
-                //view = layoutInflater.inflate(R.layout.item_image,null);
-            }
-
-
+            view = layoutInflater.inflate(R.layout.item_image,null);
         }
 
-        /*ImageView imgview = (ImageView)view.findViewById(R.id.imageView);
+
+
+        ImageView imgview = (ImageView)view.findViewById(R.id.imageView);
         final TextView txtTitre = (TextView)view.findViewById(R.id.idTitre);
-        final TextView txtAuteur =(TextView)view.findViewById(R.id.idAuteur);*/
+        final TextView txtAuteur =(TextView)view.findViewById(R.id.idAuteur);
 
-        if(isDetails)
-        {
 
-            //imageViewpanier = (ImageView)view.findViewById(R.id.buy);
-            imageViewpanier.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(activity, "Ajouté  " , Toast.LENGTH_LONG).show();
-                    // @livre contient sur qu'elle objet de la liste nous sommes
-                    Livre livre = livres.get(position);
-                    // Notre methode qui va ajouter à l'activité Panier
-                    // notre objet
-                    //ajouterLivreInPanier(livre);
-
-                }
-            });
-        }
-
-        //txtTitre.setText(livres.get(position).getTitre());
-        //txtAuteur.setText(livres.get(position).getAuteur());
+        txtTitre.setText(livres.get(position).getTitre());
+        txtAuteur.setText(livres.get(position).getAuteur());
 
         // OPERATION ALTERNER
         // Pour largeur Si isDetails est vraie on fait 300 dans le cas contraire 200
         // Vice versa pour la hauteur
 
-        int largeur = isDetails ? 300 : 200;
-        int hauteur = isDetails ? 450 : 350;
+        int largeur = 200;
+        int hauteur = 350;
 
-        //Picasso.with(activity).load(livres.get(position).getUrl()).resize(largeur,hauteur).into(imgview);
+        Picasso.with(activity).load(livres.get(position).getUrl()).resize(largeur,hauteur).into(imgview);
         return view;
     }
 }

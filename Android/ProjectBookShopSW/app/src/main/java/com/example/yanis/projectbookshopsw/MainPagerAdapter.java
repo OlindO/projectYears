@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.List;
 
 /**
- * Created by JESUS EST YAHWEH on 26/03/2017.
+ * Created by YANIS ABIB
  */
 
 public class MainPagerAdapter extends FragmentPagerAdapter {

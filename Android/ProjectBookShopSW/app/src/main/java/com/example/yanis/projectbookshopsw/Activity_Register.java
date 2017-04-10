@@ -54,6 +54,7 @@ public class Activity_Register extends AppCompatActivity {
         setContentView(R.layout.activity__register);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // On récupere tout nos champs initaliser depuis notre methode
         initialiser();
 
         /*toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -219,7 +220,9 @@ public class Activity_Register extends AppCompatActivity {
         postDataParams.put("prenom", prenom);
         postDataParams.put("password", password);
 
-        urlWS ="http://10.75.25.238:80/bookshop/json/personne.php?action=inscription";
+        //urlWS ="http://"+getResources().getString(R.string.urlConnection) +"/bookshop/json/personne.php?action=inscription";
+        urlWS ="http://"+getResources().getString(R.string.urlConnectionMaison) +
+                "/bookshop/json/personne.php?action=inscription";
 
         // Voici notre premier parametre de notre asynctask
         traitRegister = new TraitementInscription();

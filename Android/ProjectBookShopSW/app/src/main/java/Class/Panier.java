@@ -17,8 +17,6 @@ public class Panier extends ArrayList<Livre> {
     }
     public Panier() {
     }
-
-
     public Panier(Collection<? extends Livre> c) {
         super(c);
     }

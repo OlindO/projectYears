@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +47,7 @@ public class CompteFragment extends Fragment {
     private TextView txtnom, txtprenom,txtemail, txtpassword;
     private Button btnLog;
     private String sNom, sPrenom,sEmail, sPassword;
+    private String json;
 // --------------------------------------------------------------------------------------
 
     public CompteFragment() {
@@ -76,13 +79,6 @@ public class CompteFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        // RECEIVE DATA FROM PERSONNES-
-        sharedPreferences = getActivity().getSharedPreferences("SHARED_PREFERENCES", Context.MODE_PRIVATE);
-        gson = new Gson();
-
-        String json = sharedPreferences.getString("infoUserConnected", "");
-        personne = gson.fromJson(json, Personne.class);
-        // -----------------------------
 
 
        /* DrawerLayout drawer = (DrawerLayout)getActivity().findViewById(R.id.drawer_layout);
@@ -91,6 +87,23 @@ public class CompteFragment extends Fragment {
         drawer.addDrawerListener(toggle);
         toggle.syncState();*/
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // -----------------------------
+
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_compte, container, false);
+
+    }
+//   Pour chaque fragment il faut override la methode onActivityCreated pour pouvoir récuprer les données
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        // -----------------------------
         txtnom = (TextView)getActivity().findViewById(R.id.txtNom);
         txtprenom = (TextView)getActivity().findViewById(R.id.txtPrenom);
         txtemail = (TextView)getActivity().findViewById(R.id.txtEmail);
@@ -101,8 +114,19 @@ public class CompteFragment extends Fragment {
         viewSwitcherPassword = (ViewSwitcher)getActivity().findViewById(R.id.idSwitcherPassword);
         btnLog=(Button)getActivity().findViewById(R.id.btnLogin);
 
+        // RECEIVE DATA FROM PERSONNES-
+        sharedPreferences = getActivity().getSharedPreferences("SHARED_PREFERENCES", Context.MODE_PRIVATE);
+        gson = new Gson();
+
+        json = sharedPreferences.getString("infoUserConnected", "");
+        personne = gson.fromJson(json, Personne.class);
+
         if(personne != null)
         {
+            //Toast.makeText(getActivity(), "Personne, Nom : "+ personne.getNom(), Toast.LENGTH_SHORT).show();
+
+            Log.e("tagErreur", personne.getNom());
+
             txtnom.setText(personne.getNom());
             txtprenom.setText(personne.getPrenom());
             txtemail.setText(personne.getEmail());
@@ -147,13 +171,6 @@ public class CompteFragment extends Fragment {
         {
             //btnLog.setVisibility(View.VISIBLE);
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_compte, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

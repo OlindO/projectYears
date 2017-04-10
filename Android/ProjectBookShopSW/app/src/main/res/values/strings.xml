@@ -43,4 +43,12 @@ Pellentesque quis odio eu tortor ornare bibendum. In ut lorem sit amet mauris ia
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="urlConnectionMaison">192.168.0.33</string>
+    <string name="urlConneMaure">192.168.1.40</string>
+    <string name="urlConnection">10.75.25.238</string>
+    <string name="urlListerMaure">http://192.168.1.40/bookshop/json/livre.php?action=lister</string>
+
+
+    <string name="urlListerLivre">http://10.75.25.238/bookshop/json/livre.php?action=lister</string>
+    <string name="urlListerLivreMaison">http://192.168.0.33/bookshop/json/livre.php?action=lister</string>
 </resources>

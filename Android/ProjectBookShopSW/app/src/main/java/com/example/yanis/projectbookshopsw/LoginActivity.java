@@ -209,8 +209,8 @@ public class LoginActivity extends AppCompatActivity {
         postDataParams.put("email",userEmail);
         postDataParams.put("password", userPassword);
 
-        urlWS ="http://10.75.25.159:8080/bookshop/json/personne.php?action=connexion";
-
+        urlWS ="http://"+getResources().getString(R.string.urlConnectionMaison) +"/bookshop/json/personne.php?action=connexion";
+        //urlWS ="http://"+getResources().getString(R.string.urlConnection) +"/bookshop/json/personne.php?action=connexion";
         traitementLog = new TraitementLog();
         traitementLog.execute();
         //Toast.makeText(getApplicationContext(), "Login envoyer", Toast.LENGTH_SHORT).show();
