@@ -6,6 +6,7 @@ L'application vise plusieurs objectifs :
     * Création, gestion et mise à jour de son profil (Photo Profil, etc..)
     * Une fois connecté l'utlisateur va pouvoir accèder a tout les livres en vente 
 * **Section Panier**
+    * Un system de rechercher avancé, fonctionnement par trie (Thème, Prix, Date de sortie)
     * Un panier regroupant tout les articles choisie (en cours d'éxecution)
 ## Usage
 C'est juste un commencement avec les fonctions de connection et d'inscription ainsi qu'un system d'achat de livre en ligne.
