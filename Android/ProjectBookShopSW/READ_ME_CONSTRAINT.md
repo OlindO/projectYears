@@ -1,20 +1,26 @@
 # Android Application Login+Register & Book Store Service
 Un service de connection et d'inscription et d'achat de livre
+
 ## Object Attendue
 L'application vise plusieurs objectifs :
 * **Connection & Inscription**
-    * Création, gestion et mise à jour de son profil (Photo Profil, etc..)
+    * Création, gestion et mise à jour de son profil (Photo Profil, nom, prenom..)
     * Une fois connecté l'utlisateur va pouvoir accèder a tout les livres en vente 
+    
 * **Section Panier**
     * Un system de rechercher avancé, fonctionnement par trie (Thème, Prix, Date de sortie)
     * Un panier regroupant tout les articles choisie (en cours d'éxecution)
+    
+* **Details**   
+    * Lors de la selection d'un livre dans la section recherche avancé, une redirection vers une activité qui detaillera le prix, le titre l'auteur et la photo d'un livre ainsi que sa description.	
+
 ## Usage
-C'est juste un commencement avec les fonctions de connection et d'inscription ainsi qu'un system d'achat de livre en ligne.
+C'est juste un commencement avec les fonctions de connection et d'inscription ainsi qu'un system d'achat de livre en ligne(panier), et un systeme de rechercher avancé pour les livres.
 ## Les contraintes Techniques
-L'application sera développée à l'aide d'Android Studio, un IDE(Integrated DevelopmentEnvironment, ou environnement de développement intégré) qui succède au déjà bien connuEclipse.Encore assez jeune, ce logiciel permet le développement d'applications Android en utilisantprincipalement les langages Java et XML. Une documentation assez complète est présentesur   le   site   officiel   de   l'application   (mais   uniquement   en   Anglais),   et   un   forum(stackoverflow.com) présente de nombreux résultats pour les programmeurs qui débutentavec cet outil (là encore, les résultats sont en Anglais).
+L'application sera développée à l'aide d'Android Studio, un IDE(Integrated DevelopmentEnvironment, ou environnement de développement intégré) qui succède au déjà bien connu Eclipse encore assez jeune, ce logiciel permet le développement d'applications Android en utilisantprincipalement les langages Java et XML. Une documentation assez complète est présentesur   le   site   officiel   de   l'application   (mais   uniquement   en   Anglais),   et   un   forum(stackoverflow.com) présente de nombreux résultats pour les programmeurs qui débutent avec cet outil (là encore, les résultats sont en Anglais).
 ## Installation
 1. Ouvrez ProjectBookShopSW/bookshop et importez la base de donnée sur votre serveur ou ->
-2. Dans votre base de donnée, ouvrez votre terminal et collez ceci :
+2. Dans votre base de donnée, ouvrez votre terminal dans phpMyAdmin ("Exécuter une ou des requêtes SQL sur le serveur "localhost":") et collez ceci :
 
 ```sql
 -- phpMyAdmin SQL Dump
