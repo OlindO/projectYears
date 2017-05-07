@@ -3,8 +3,10 @@ package com.example.yanis.projectbookshopsw;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.view.View;
 
+import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -30,7 +32,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class AdvancedResearch extends AppCompatActivity {
+public class AdvancedResearch extends AppCompatActivity{
 
     private LivreAdapteur livreAdapteur;
     private MenuDeroulantAdapter listAdapter;
@@ -40,7 +42,11 @@ public class AdvancedResearch extends AppCompatActivity {
     private Theme theme;
 
     private ListView listV;
-
+    /*ListView lv;
+    SearchView searchView;
+    ArrayAdapter<String> adapter;
+    String[] data = {"Arjun", "Ankit", "Arvind", "Dipesh", "Dinesh", "Deven"};
+*/
     private ArrayList<String> filsHeaderTheme;
     private ArrayList<String> filsHeaderPrix;
     private ArrayList<String> filsHeaderDateSortie;
@@ -51,6 +57,7 @@ public class AdvancedResearch extends AppCompatActivity {
     private ArrayList<Livre> collLivreSearchResult;
     private ArrayList<Livre> collLivreSearchResultPrice;
     private ArrayList<Livre> collLivreLivreByDateLivre;
+    private ArrayList<Livre> collLivreByDateStr;
 
     private ProgressBar progressBar;
     private TraiJson traiJson;
@@ -62,6 +69,12 @@ public class AdvancedResearch extends AppCompatActivity {
         setContentView(R.layout.activity_advanced_research);
 
         setTitle("Recherche Avancé");
+
+  /*      lv = (ListView) findViewById(R.id.idlistview);
+        searchView = (SearchView) findViewById(R.id.idsearch);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        lv.setAdapter(adapter);
+        searchView.setOnQueryTextListener(this);*/
 
         livre = new Livre();
         theme = new Theme();
@@ -119,6 +132,8 @@ public class AdvancedResearch extends AppCompatActivity {
                         childPosition);
                 switch(listHeaderParent.get(groupPosition))
                 {
+                    // Dans le cas ou c'est un prix on va seulement rajouter à notre
+                    // SubTitle "€" a côté de la valeur
                     case "Prix":
                         getSupportActionBar().setSubtitle
                                 (listHeaderParent.get(groupPosition)
@@ -141,6 +156,7 @@ public class AdvancedResearch extends AppCompatActivity {
 
                 }
 
+                //  Lorsque l'on clique sur un enfant on enleve le dépliment
                 for(int i =0; i<listHeaderParent.size();i++)
                 {
                     expListView.collapseGroup(i);
@@ -159,6 +175,8 @@ public class AdvancedResearch extends AppCompatActivity {
                         .show();
              */
 
+            // Ici on va afficher notre listView en dessous de notre expandableListV
+                // en fonction du groupe et de l'enfant sur lequel on se positionne
             switch(groupPosition)
             {
                 case 0:
@@ -166,7 +184,6 @@ public class AdvancedResearch extends AppCompatActivity {
                             listerLivreByTheme(collLivre,itemChilSELECTED);
                     livreAdapteur = new LivreAdapteur(AdvancedResearch.this,
                             collLivreSearchResult);
-
 
                     break;
                 case 1:
@@ -180,6 +197,22 @@ public class AdvancedResearch extends AppCompatActivity {
                             listerLivreByDateLivre(collLivre, itemChilSELECTED);
                     livreAdapteur = new LivreAdapteur(AdvancedResearch.this,
                             collLivreLivreByDateLivre);
+
+                    if(itemChilSELECTED.equals("Moins de 3 Moi"))
+                    {
+                        collLivreLivreByDateLivre = livre.
+                                listDateLessBy3Month(collLivre);
+                        livreAdapteur = new LivreAdapteur(AdvancedResearch.this,
+                                collLivreLivreByDateLivre);
+                    }
+                    else if(itemChilSELECTED.equals("Plus de 3 Moi"))
+                    {
+                        collLivreLivreByDateLivre = livre.
+                                listeDateMoreThan3Month(collLivre);
+                        livreAdapteur = new LivreAdapteur(AdvancedResearch.this,
+                                collLivreLivreByDateLivre);
+                    }
+
                     break;
 
             }
@@ -188,7 +221,7 @@ public class AdvancedResearch extends AppCompatActivity {
             }
         });
         traiJson = new TraiJson();
-        traiJson.execute(getResources().getString(R.string.urlListerMaure));
+        traiJson.execute(getResources().getString(R.string.urlListerLivreMaison));
     }
 
     /*
@@ -212,7 +245,22 @@ public class AdvancedResearch extends AppCompatActivity {
     {
         JSONObject jsonObject = new JSONObject(jsonFile);
     }
+/*
+*FOR THE SEARCH VIEW REGION
+* */
+  /*  @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
 
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        String text = newText;
+        adapter.getFilter().filter(newText);
+        //Toast.makeText(this,"Query is "+ text,Toast.LENGTH_SHORT).show();
+        return false;
+    }*/
+// ENDREGION
 
     public class TraiJson extends AsyncTask<String, Integer, ArrayList<Livre>>
     {
@@ -253,7 +301,7 @@ public class AdvancedResearch extends AppCompatActivity {
             }
 
 
-            // collLivre est notre liste d'objet Livre retourner depuis notre
+            //  collLivre est notre liste d'objet Livre retourner depuis notre
             //  JSon
             collLivre = new ArrayList<>();
             try {
@@ -268,7 +316,7 @@ public class AdvancedResearch extends AppCompatActivity {
                     String nom_auteur= jsonObject1.getString("nom_auteur");
                     String libelle_theme = jsonObject1.getString("libelle_theme");
                     String description= jsonObject1.getString("description");
-                    double  prix = jsonObject1.getDouble("prix");
+                    double prix = jsonObject1.getDouble("prix");
                     String isbn = jsonObject1.getString("isbn");
                     String photo= jsonObject1.getString("photo");
                     String date= jsonObject1.getString("date");
@@ -305,7 +353,7 @@ public class AdvancedResearch extends AppCompatActivity {
 
             filsHeaderTheme = theme.arrayListTheme(s);
             filsHeaderPrix = livre.listLivreOfPrice(s);
-            filsHeaderDateSortie = livre.listLivreOfDate(s);
+            filsHeaderDateSortie = livre.listLivreOfDateBETWEEN();
 
 
             //listDataChild.put(theme.arrayListTheme(s);

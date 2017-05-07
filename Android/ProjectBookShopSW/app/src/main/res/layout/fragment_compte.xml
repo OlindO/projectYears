@@ -11,90 +11,15 @@
         <ViewSwitcher
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idSwitcherNom"
-            >
+            android:id="@+id/idSwitcher">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtNom"
-                android:hint="Nom"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editNom"
-
-                />
-        </ViewSwitcher>
-        <ViewSwitcher
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/idSwitcherPrenom">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtPrenom"
-                android:hint="Prenom"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editPrenom"
-                />
+            <include layout="@layout/textview_profil"/>
+            <include layout="@layout/edittext_profil"/>
 
 
         </ViewSwitcher>
-        <ViewSwitcher
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/idSwitcherEmail">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtEmail"
-                android:hint="Email"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editEmail" />
 
 
-        </ViewSwitcher>
-        <ViewSwitcher
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/idSwitcherPassword">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtPassword"
-                android:hint="Password"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editPassword"
-                />
-
-        </ViewSwitcher>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnUpdate"
-                android:visibility="invisible"
-                android:layout_marginLeft="90dp"
-                android:text="Update"
-                />
-        </LinearLayout>
 
     </LinearLayout>
 

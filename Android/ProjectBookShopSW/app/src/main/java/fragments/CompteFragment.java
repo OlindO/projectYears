@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
@@ -43,11 +44,13 @@ public class CompteFragment extends Fragment {
     private SharedPreferences sharedPreferences;
     private Gson gson;
     private Personne personne;
-    private ViewSwitcher viewSwitcherNom, viewSwitcherPrenom,viewSwitcherEmail,viewSwitcherPassword;
+    private ViewSwitcher viewSwitcher;
     private TextView txtnom, txtprenom,txtemail, txtpassword;
     private Button btnLog;
     private String sNom, sPrenom,sEmail, sPassword;
     private String json;
+    private LinearLayout linearLayout;
+
 // --------------------------------------------------------------------------------------
 
     public CompteFragment() {
@@ -98,7 +101,8 @@ public class CompteFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_compte, container, false);
 
     }
-//   Pour chaque fragment il faut override la methode onActivityCreated pour pouvoir récuprer les données
+//   Pour chaque fragment il faut override la methode onActivityCreated
+//   pour pouvoir récuprer les données
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -108,10 +112,8 @@ public class CompteFragment extends Fragment {
         txtprenom = (TextView)getActivity().findViewById(R.id.txtPrenom);
         txtemail = (TextView)getActivity().findViewById(R.id.txtEmail);
         txtpassword = (TextView)getActivity().findViewById(R.id.txtPassword);
-        viewSwitcherNom = (ViewSwitcher)getActivity().findViewById(R.id.idSwitcherNom);
-        viewSwitcherPrenom= (ViewSwitcher)getActivity().findViewById(R.id.idSwitcherPrenom);
-        viewSwitcherEmail = (ViewSwitcher)getActivity().findViewById(R.id.idSwitcherEmail);
-        viewSwitcherPassword = (ViewSwitcher)getActivity().findViewById(R.id.idSwitcherPassword);
+        viewSwitcher = (ViewSwitcher)getActivity().findViewById(R.id.idSwitcher);
+        linearLayout = (LinearLayout)getActivity().findViewById(R.id.textViewContent);
         btnLog=(Button)getActivity().findViewById(R.id.btnLogin);
 
         // RECEIVE DATA FROM PERSONNES-
@@ -137,30 +139,13 @@ public class CompteFragment extends Fragment {
             Toast.makeText(getActivity(), "Champs incorrect, Ressayez ", Toast.LENGTH_SHORT).show();
         }
 
-        txtnom.setOnClickListener(new View.OnClickListener() {
+        linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewSwitcherNom.showNext();
+                viewSwitcher.showNext();
             }
         });
-        txtprenom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewSwitcherPrenom.showNext();
-            }
-        });
-        txtemail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewSwitcherEmail.showNext();
-            }
-        });
-        txtpassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewSwitcherPassword.showNext();
-            }
-        });
+
         sNom = txtnom.getText().toString().trim();
         sPrenom = txtprenom.getText().toString().trim();
         sEmail = txtemail.getText().toString().trim();
@@ -169,7 +154,7 @@ public class CompteFragment extends Fragment {
         if((sNom.length() >0 ) && (sPrenom.length() >0) && (sEmail.length() >0)
                 && (sPassword.length() >0))
         {
-            //btnLog.setVisibility(View.VISIBLE);
+            /*DO SOMETHING*/
         }
     }
 

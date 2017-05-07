@@ -160,6 +160,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         // C'est lorsque les données on était envoyer au serveur on ensuite les affichées
+        // @result va contenir notre valeur de retours depuis notre php ...
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
@@ -167,7 +168,7 @@ public class LoginActivity extends AppCompatActivity {
            // Log.e("tag", result);
             progressDialog.dismiss();
 
-            //Toast.makeText(LoginActivity.this, result, Toast.LENGTH_LONG).show();
+            // Si dans ntore valeurs de retours le mot erreur exist alors on affiche l'erreur dans un TOAST
             if(result.contains("Erreur"))
             {
                 Toast.makeText(LoginActivity.this, result, Toast.LENGTH_SHORT).show();
@@ -175,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
             else
             {
                 // Puisque que la reponse est récupérer sous forme de format JSon on a pas besoin de le convertir
-               /* Toast.makeText(LoginActivity.this,result, Toast.LENGTH_SHORT).show();*/
+
                 editor.putString("infoUserConnected", result);
                 editor.commit();
 
@@ -215,4 +216,5 @@ public class LoginActivity extends AppCompatActivity {
         traitementLog.execute();
         //Toast.makeText(getApplicationContext(), "Login envoyer", Toast.LENGTH_SHORT).show();
     }
+
 }
