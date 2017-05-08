@@ -9,11 +9,11 @@ L'application vise plusieurs objectifs :
     ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/Log%26Reg.png)
 * **Profil**
     * L'utilisateur va pouvoir avoir accez depuis le Menue sur la gauche les Rubrique : 
-    	* Mon compte
-	* Mes factures
-	* Mes favoris
+    	** Mon compte
+	** Mes factures
+	** Mes favoris
 	
-    * ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/MenuLeft.png)
+    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/MenuLeft.png)
     * Il va pouvoir aussi modifier ces information personnel 
     ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/ProfilUpdate.png)
 	
