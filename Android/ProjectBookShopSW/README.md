@@ -6,10 +6,21 @@ L'application vise plusieurs objectifs :
 * **Connection & Inscription**
     * Création, gestion et mise à jour de son profil (Photo Profil, nom, prenom..)
     * Une fois connecté l'utlisateur va pouvoir accèder a tout les livres en vente 
-    
+    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/Log%26Reg.png)
+* **Profil**
+    * L'utilisateur va pouvoir avoir accez depuis le Menue sur la gauche les Rubrique : 
+    	* Mon compte
+	* Mes factures
+	* Mes favoris
+	
+    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/MenuLeft.png)
+    * Il va pouvoir aussi modifier ces information personnel 
+    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/ProfilUpdate.png)
+	
 * **Section Panier**
     * Un system de rechercher avancé, fonctionnement par trie (Thème, Prix, Date de sortie)
     * Un panier regroupant tout les articles choisie (en cours d'éxecution)
+    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/RechercheAvanceStart.png)
     
 * **Details**   
     * Lors de la selection d'un livre dans la section recherche avancé, une redirection vers une activité qui detaillera le prix, le titre l'auteur et la photo d'un livre ainsi que sa description.	
