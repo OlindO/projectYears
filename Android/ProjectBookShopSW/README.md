@@ -6,7 +6,6 @@ L'application vise plusieurs objectifs :
 * **Connection & Inscription**
     * Création, gestion et mise à jour de son profil (Photo Profil, nom, prenom..)
     * Une fois connecté l'utlisateur va pouvoir accèder a tout les livres en vente 
-    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/Login.png)
     
 * **Section Panier**
     * Un system de rechercher avancé, fonctionnement par trie (Thème, Prix, Date de sortie)
