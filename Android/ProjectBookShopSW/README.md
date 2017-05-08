@@ -13,7 +13,7 @@ L'application vise plusieurs objectifs :
 	* Mes factures
 	* Mes favoris
 	
-    ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/MenuLeft.png)
+    * ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/MenuLeft.png)
     * Il va pouvoir aussi modifier ces information personnel 
     ![editor](https://github.com/OlindO/projectYears/blob/master/Android/ProjectBookShopSW/ImageOfApplication/ProfilUpdate.png)
 	
